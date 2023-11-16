@@ -55,6 +55,19 @@ function getFlavors(orderArray) {
 
 //get the number of times the flavor is listed
 //found answer on stack overflow post: https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript
+//also found code on how to count duplicate values in an array by John Au-Yeung on Medium https://javascript.plainenglish.io/how-to-count-duplicate-values-in-an-array-in-javascript-544ca527313
+/*my understanding of the code: 
+declare an empty object
+this method executes a provided function once for each element in an array  -MDN web docs
+take the array we want to apply forEach which needs to have condtions like other for loops
+can set iteratitce varialbe as 2 options:
+    1. function (var) {};
+    2. (var) => {};
+this is creating a callback where each new array item i is being placed as a property of froyoOrder
+loop updates froyoOrder as we find i in each iteration
+set a conditon if froyoOrder[i] has nothing in it yet so froyoOrder[i] logical operator || = boolean operator Or 0
+then our icrease condition of + 1
+*/
 //creates empty object
 const froyoOrder = {};
 //using forEach array method to count each of the array elements
